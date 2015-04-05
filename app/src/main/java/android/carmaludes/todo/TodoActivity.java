@@ -41,7 +41,7 @@ public class TodoActivity extends Activity {
             Scanner scanner = new Scanner(openFileInput("ToDo.txt"));
 
             while(scanner.hasNextLine()) {
-                String toDo = scanner.nextLine()
+                String toDo = scanner.nextLine();
                 arrayAdapterToDo.add(toDo);
             }
 
@@ -107,7 +107,7 @@ public class TodoActivity extends Activity {
 
             PrintWriter pw = new PrintWriter(openFileOutput("Todo.txt", Context.MODE_PRIVATE));
 
-            for(String toDo) {
+            for(String toDo : arrayListToDo) {
                 pw.println();
             }
 
